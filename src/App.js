@@ -43,7 +43,7 @@ function App() {
       <h1>Stopwatch</h1>
       <p>Time: {formatTime(time)}</p>
       <div>
-        <button onClick={toggle}>{isActive ? "Pause" : "Start"}</button>
+        <button onClick={toggle}>{isActive ? "Stop" : "Start"}</button>
         <button onClick={reset}>Reset</button>
       </div>
     </div>
