@@ -5,12 +5,10 @@ function App() {
   const [time, setTime] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
-  // Start or stop the stopwatch
   const toggle = () => {
     setIsActive(!isActive);
   };
 
-  // Reset the stopwatch
   const reset = () => {
     setTime(0);
     setIsActive(false);
@@ -22,7 +20,7 @@ function App() {
     if (isActive) {
       interval = setInterval(() => {
         setTime((time) => time + 1);
-      }, 1000); // Update every second
+      }, 1000); 
     } else if (!isActive && time !== 0) {
       clearInterval(interval);
     }
@@ -35,7 +33,7 @@ function App() {
     const minutes = `${Math.floor(time / 60)}`;
     const getMinutes = `0${minutes % 60}`.slice(-1);
 
-    return `${getMinutes} : ${getSeconds}`;
+    return `${getMinutes}:${getSeconds}`;
   };
 
   return (
